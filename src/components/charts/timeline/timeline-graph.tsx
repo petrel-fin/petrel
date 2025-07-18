@@ -11,12 +11,12 @@ import {
   CardTitle,
 } from "~/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartLegend,
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
+  type ChartConfig,
 } from "~/components/ui/chart";
 import {
   Select,

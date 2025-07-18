@@ -19,12 +19,12 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "~/components/ui/sidebar";
-import { NavPage } from "./types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaTimeline } from "react-icons/fa6";
 import { MdFormatListBulleted } from "react-icons/md";
 import { BsPieChart } from "react-icons/bs";
+import type { NavPage } from "./types";
 
 const mainPages: NavPage[] = [
   {

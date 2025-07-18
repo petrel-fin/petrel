@@ -26,7 +26,7 @@ import { MdFormatListBulleted } from "react-icons/md";
 import { BsPieChart } from "react-icons/bs";
 import type { NavPage } from "./types";
 
-const mainPages: NavPage[] = [
+const visualizationPages: NavPage[] = [
   {
     title: "Overview",
     url: "/dashboard",
@@ -64,6 +64,9 @@ const mainPages: NavPage[] = [
     icon: <LuChartNoAxesCombined />,
     badge: "22",
   },
+];
+
+const dataPages: NavPage[] = [
   {
     title: "Income",
     url: "/dashboard/income",
@@ -94,24 +97,46 @@ export default function NavMain() {
   const pathname = usePathname();
 
   return (
-    <SidebarGroup>
-      <SidebarGroupLabel>Navigation</SidebarGroupLabel>
-      <SidebarMenu>
-        {mainPages.map((item) => (
-          <SidebarMenuItem key={item.title}>
-            <SidebarMenuButton asChild isActive={pathname === item.url}>
-              <Link href={item.url}>
-                {item.icon}
-                <span>{item.title}</span>
-              </Link>
-            </SidebarMenuButton>
+    <>
+      <SidebarGroup>
+        <SidebarGroupLabel>Visualization</SidebarGroupLabel>
+        <SidebarMenu>
+          {visualizationPages.map((item) => (
+            <SidebarMenuItem key={item.title}>
+              <SidebarMenuButton asChild isActive={pathname === item.url}>
+                <Link href={item.url}>
+                  {item.icon}
+                  <span>{item.title}</span>
+                </Link>
+              </SidebarMenuButton>
 
-            {item.badge ? (
-              <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
-            ) : null}
-          </SidebarMenuItem>
-        ))}
-      </SidebarMenu>
-    </SidebarGroup>
+              {item.badge ? (
+                <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
+              ) : null}
+            </SidebarMenuItem>
+          ))}
+        </SidebarMenu>
+      </SidebarGroup>
+
+      <SidebarGroup>
+        <SidebarGroupLabel>Data</SidebarGroupLabel>
+        <SidebarMenu>
+          {dataPages.map((item) => (
+            <SidebarMenuItem key={item.title}>
+              <SidebarMenuButton asChild isActive={pathname === item.url}>
+                <Link href={item.url}>
+                  {item.icon}
+                  <span>{item.title}</span>
+                </Link>
+              </SidebarMenuButton>
+
+              {item.badge ? (
+                <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
+              ) : null}
+            </SidebarMenuItem>
+          ))}
+        </SidebarMenu>
+      </SidebarGroup>
+    </>
   );
 }

@@ -7,9 +7,9 @@ import { MdOutlineSsidChart } from "react-icons/md";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { MdPhonelink } from "react-icons/md";
 import { FaRegCreditCard } from "react-icons/fa6";
-import { TbChartTreemap } from "react-icons/tb";
 import { CiDollar } from "react-icons/ci";
 import { SlGraph } from "react-icons/sl";
+import { LuBrain } from "react-icons/lu";
 
 import {
   SidebarGroup,
@@ -25,6 +25,7 @@ import { FaTimeline } from "react-icons/fa6";
 import { MdFormatListBulleted } from "react-icons/md";
 import { BsPieChart } from "react-icons/bs";
 import type { NavPage } from "./types";
+import { Badge } from "~/components/ui/badge";
 
 const visualizationPages: NavPage[] = [
   {
@@ -52,11 +53,6 @@ const visualizationPages: NavPage[] = [
     title: "Budgeting",
     url: "/dashboard/budgeting",
     icon: <BsPieChart />,
-  },
-  {
-    title: "Net Worth",
-    url: "/dashboard/net-worth",
-    icon: <TbChartTreemap />,
   },
   {
     title: "Investments",
@@ -135,6 +131,22 @@ export default function NavMain() {
               ) : null}
             </SidebarMenuItem>
           ))}
+        </SidebarMenu>
+      </SidebarGroup>
+
+      <SidebarGroup>
+        <SidebarGroupLabel>AI</SidebarGroupLabel>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton disabled>
+              <LuBrain />
+              Chat
+            </SidebarMenuButton>
+
+            <SidebarMenuBadge>
+              <Badge variant="secondary">Coming Soon</Badge>
+            </SidebarMenuBadge>
+          </SidebarMenuItem>
         </SidebarMenu>
       </SidebarGroup>
     </>

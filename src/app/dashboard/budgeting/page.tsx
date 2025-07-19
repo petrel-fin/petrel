@@ -4,44 +4,27 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
+import CurrentMonthlyBudget from "./components/current-monthly-budget";
+import PastBudgetPerformance from "./components/past-budget-performance";
+import BudgetBreakdown from "./components/budget-breakdown";
+import BudgetGoals from "./components/budget-goals";
+import BudgetCategories from "./components/budget-categories";
 
 export default function TransactionsPage() {
   return (
-    <div className="flex h-full w-full gap-4 px-4">
-      <Card className="h-[910px] w-full">
-        <CardHeader>
-          <CardTitle>Categories</CardTitle>
-          <CardDescription>
-            Showing total visitors for the last 3 months
-          </CardDescription>
-        </CardHeader>
-      </Card>
-
-      <div className="flex w-full flex-col gap-4">
-        <Card className="h-[293px] w-full">
-          <CardHeader>
-            <CardTitle>Circle Graph</CardTitle>
-            <CardDescription>
-              Showing total visitors for the last 3 months
-            </CardDescription>
-          </CardHeader>
-        </Card>
-        <Card className="h-[293px] w-full">
-          <CardHeader>
-            <CardTitle>Previous Month</CardTitle>
-            <CardDescription>
-              Showing total visitors for the last 3 months
-            </CardDescription>
-          </CardHeader>
-        </Card>
-        <Card className="h-[293px] w-full">
-          <CardHeader>
-            <CardTitle>Recurring</CardTitle>
-            <CardDescription>
-              Showing total visitors for the last 3 months
-            </CardDescription>
-          </CardHeader>
-        </Card>
+    <div className="grid w-full grid-cols-12 gap-4 px-4">
+      <div className="col-span-4">
+        <div className="flex flex-col gap-4">
+          <CurrentMonthlyBudget />
+          <BudgetBreakdown />
+          <BudgetGoals />
+        </div>
+      </div>
+      <div className="col-span-8">
+        <div className="flex flex-col gap-4">
+          <PastBudgetPerformance />
+          <BudgetCategories />
+        </div>
       </div>
     </div>
   );

@@ -54,12 +54,6 @@ const visualizationPages: NavPage[] = [
     url: "/dashboard/budgeting",
     icon: <BsPieChart />,
   },
-  {
-    title: "Investments",
-    url: "/dashboard/investments",
-    icon: <LuChartNoAxesCombined />,
-    badge: "22",
-  },
 ];
 
 const dataPages: NavPage[] = [

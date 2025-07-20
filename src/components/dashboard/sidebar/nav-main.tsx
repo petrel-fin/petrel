@@ -4,7 +4,6 @@ import * as React from "react";
 import { MdOutlineDashboard } from "react-icons/md";
 
 import { MdOutlineSsidChart } from "react-icons/md";
-import { LuChartNoAxesCombined } from "react-icons/lu";
 import { MdPhonelink } from "react-icons/md";
 import { FaRegCreditCard } from "react-icons/fa6";
 import { CiDollar } from "react-icons/ci";

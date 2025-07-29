@@ -9,6 +9,7 @@ import { FaRegCreditCard } from "react-icons/fa6";
 import { CiDollar } from "react-icons/ci";
 import { SlGraph } from "react-icons/sl";
 import { LuBrain } from "react-icons/lu";
+import { LuRepeat2 } from "react-icons/lu";
 
 import {
   SidebarGroup,
@@ -46,7 +47,12 @@ const visualizationPages: NavPage[] = [
     title: "Transactions",
     url: "/dashboard/transactions",
     icon: <MdFormatListBulleted />,
-    badge: "5",
+  },
+  {
+    title: "Recurring",
+    url: "/dashboard/recurring",
+    icon: <LuRepeat2 />,
+    badge: "12",
   },
   {
     title: "Budgeting",
@@ -79,6 +85,14 @@ const dataPages: NavPage[] = [
     url: "/dashboard/possessions",
     icon: <MdPhonelink />,
     badge: "9",
+  },
+];
+
+const aiPages: NavPage[] = [
+  {
+    title: "Chat",
+    url: "/dashboard/chat",
+    icon: <LuBrain />,
   },
 ];
 
@@ -130,16 +144,20 @@ export default function NavMain() {
       <SidebarGroup>
         <SidebarGroupLabel>AI</SidebarGroupLabel>
         <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton disabled>
-              <LuBrain />
-              Chat
-            </SidebarMenuButton>
+          {aiPages.map((item) => (
+            <SidebarMenuItem key={item.title}>
+              <SidebarMenuButton asChild isActive={pathname === item.url}>
+                <Link href={item.url}>
+                  {item.icon}
+                  <span>{item.title}</span>
+                </Link>
+              </SidebarMenuButton>
 
-            <SidebarMenuBadge>
-              <Badge variant="secondary">Coming Soon</Badge>
-            </SidebarMenuBadge>
-          </SidebarMenuItem>
+              {item.badge ? (
+                <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
+              ) : null}
+            </SidebarMenuItem>
+          ))}
         </SidebarMenu>
       </SidebarGroup>
     </>

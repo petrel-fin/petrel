@@ -1,11 +1,9 @@
-import TimelineGraph from "~/components/charts/timeline/timeline-graph";
-import PlanningTabs from "~/components/dashboard/planning/planning-tabs";
-
-export default function DashboardPlansPage() {
+export default function DashboardPlanningPage() {
   return (
-    <div className="flex h-full w-full flex-col gap-4 px-4">
-      <TimelineGraph />
-      <PlanningTabs />
+    <div className="flex h-full w-full items-center justify-center pb-24">
+      <h3 className="text-muted-foreground scroll-m-20 text-2xl font-semibold tracking-tight">
+        Planning Page
+      </h3>
     </div>
   );
 }

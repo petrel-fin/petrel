@@ -61,6 +61,9 @@ export default function NavSidebar({
                       <span>Delete Project</span>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
+                      <span>Set as Master Plan</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
                       <span>Duplicate Project</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>

@@ -1,0 +1,542 @@
+[
+  {
+    "id": 1,
+    "description": "Grocery shopping",
+    "amount": "$75.32",
+    "category": "Food",
+    "recipient": "Local Supermarket",
+    "method": "Credit Card",
+    "date": "2025-07-01"
+  },
+  {
+    "id": 2,
+    "description": "Monthly rent",
+    "amount": "$1200.00",
+    "category": "Housing",
+    "recipient": "Landlord Inc.",
+    "method": "Bank Transfer",
+    "date": "2025-07-01"
+  },
+  {
+    "id": 3,
+    "description": "Internet bill",
+    "amount": "$59.99",
+    "category": "Utilities",
+    "recipient": "ISP Provider",
+    "method": "Debit Card",
+    "date": "2025-07-02"
+  },
+  {
+    "id": 4,
+    "description": "Coffee shop purchase",
+    "amount": "$12.45",
+    "category": "Food",
+    "recipient": "Cafe Java",
+    "method": "Mobile Payment",
+    "date": "2025-07-03"
+  },
+  {
+    "id": 5,
+    "description": "Gasoline refill",
+    "amount": "$45.67",
+    "category": "Transportation",
+    "recipient": "Gas Station",
+    "method": "Credit Card",
+    "date": "2025-07-03"
+  },
+  {
+    "id": 6,
+    "description": "Movie tickets",
+    "amount": "$28.00",
+    "category": "Entertainment",
+    "recipient": "Cinema World",
+    "method": "Online Payment",
+    "date": "2025-07-04"
+  },
+  {
+    "id": 7,
+    "description": "Electricity bill",
+    "amount": "$89.10",
+    "category": "Utilities",
+    "recipient": "Power Co.",
+    "method": "Bank Transfer",
+    "date": "2025-07-05"
+  },
+  {
+    "id": 8,
+    "description": "Dinner at restaurant",
+    "amount": "$65.20",
+    "category": "Food",
+    "recipient": "Tasty Bistro",
+    "method": "Credit Card",
+    "date": "2025-07-05"
+  },
+  {
+    "id": 9,
+    "description": "Online course subscription",
+    "amount": "$29.99",
+    "category": "Education",
+    "recipient": "LearnEasy",
+    "method": "PayPal",
+    "date": "2025-07-06"
+  },
+  {
+    "id": 10,
+    "description": "Car insurance",
+    "amount": "$150.00",
+    "category": "Insurance",
+    "recipient": "AutoSafe Ins.",
+    "method": "Bank Transfer",
+    "date": "2025-07-06"
+  },
+  {
+    "id": 11,
+    "description": "Gym membership",
+    "amount": "$40.00",
+    "category": "Health",
+    "recipient": "FitLife Gym",
+    "method": "Debit Card",
+    "date": "2025-07-07"
+  },
+  {
+    "id": 12,
+    "description": "Clothing purchase",
+    "amount": "$120.75",
+    "category": "Shopping",
+    "recipient": "Fashion Store",
+    "method": "Credit Card",
+    "date": "2025-07-08"
+  },
+  {
+    "id": 13,
+    "description": "Phone bill",
+    "amount": "$65.00",
+    "category": "Utilities",
+    "recipient": "MobileNet",
+    "method": "Online Payment",
+    "date": "2025-07-08"
+  },
+  {
+    "id": 14,
+    "description": "Book purchase",
+    "amount": "$22.50",
+    "category": "Education",
+    "recipient": "BookHaven",
+    "method": "PayPal",
+    "date": "2025-07-09"
+  },
+  {
+    "id": 15,
+    "description": "Parking fee",
+    "amount": "$10.00",
+    "category": "Transportation",
+    "recipient": "City Parking",
+    "method": "Cash",
+    "date": "2025-07-09"
+  },
+  {
+    "id": 16,
+    "description": "Concert tickets",
+    "amount": "$85.00",
+    "category": "Entertainment",
+    "recipient": "MusicLive",
+    "method": "Credit Card",
+    "date": "2025-07-10"
+  },
+  {
+    "id": 17,
+    "description": "Water bill",
+    "amount": "$35.40",
+    "category": "Utilities",
+    "recipient": "Water Dept.",
+    "method": "Bank Transfer",
+    "date": "2025-07-10"
+  },
+  {
+    "id": 18,
+    "description": "Pharmacy purchase",
+    "amount": "$18.99",
+    "category": "Health",
+    "recipient": "HealthMart",
+    "method": "Debit Card",
+    "date": "2025-07-11"
+  },
+  {
+    "id": 19,
+    "description": "Streaming service",
+    "amount": "$14.99",
+    "category": "Entertainment",
+    "recipient": "StreamFlix",
+    "method": "Online Payment",
+    "date": "2025-07-12"
+  },
+  {
+    "id": 20,
+    "description": "Home repair service",
+    "amount": "$200.00",
+    "category": "Housing",
+    "recipient": "FixIt Pros",
+    "method": "Credit Card",
+    "date": "2025-07-12"
+  },
+  {
+    "id": 21,
+    "description": "Taxi ride",
+    "amount": "$22.30",
+    "category": "Transportation",
+    "recipient": "City Taxi",
+    "method": "Mobile Payment",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 22,
+    "description": "Pet supplies",
+    "amount": "$45.80",
+    "category": "Pets",
+    "recipient": "Pet Store",
+    "method": "Debit Card",
+    "date": "2025-07-13"
+  },
+  {
+    "id": 23,
+    "description": "Charity donation",
+    "amount": "$50.00",
+    "category": "Donation",
+    "recipient": "Hope Fund",
+    "method": "PayPal",
+    "date": "2025-07-14"
+  },
+  {
+    "id": 24,
+    "description": "Laptop repair",
+    "amount": "$150.00",
+    "category": "Electronics",
+    "recipient": "TechFix",
+    "method": "Credit Card",
+    "date": "2025-07-14"
+  },
+  {
+    "id": 25,
+    "description": "Haircut",
+    "amount": "$30.00",
+    "category": "Personal Care",
+    "recipient": "Style Salon",
+    "method": "Cash",
+    "date": "2025-07-15"
+  },
+  {
+    "id": 26,
+    "description": "Flight ticket",
+    "amount": "$350.00",
+    "category": "Travel",
+    "recipient": "AirTravel Co.",
+    "method": "Online Payment",
+    "date": "2025-07-15"
+  },
+  {
+    "id": 27,
+    "description": "Car maintenance",
+    "amount": "$180.50",
+    "category": "Transportation",
+    "recipient": "AutoShop",
+    "method": "Credit Card",
+    "date": "2025-07-16"
+  },
+  {
+    "id": 28,
+    "description": "Gift purchase",
+    "amount": "$60.00",
+    "category": "Shopping",
+    "recipient": "Gift Emporium",
+    "method": "Debit Card",
+    "date": "2025-07-16"
+  },
+  {
+    "id": 29,
+    "description": "Dental checkup",
+    "amount": "$75.00",
+    "category": "Health",
+    "recipient": "Smile Clinic",
+    "method": "Credit Card",
+    "date": "2025-07-17"
+  },
+  {
+    "id": 30,
+    "description": "Cable TV subscription",
+    "amount": "$45.00",
+    "category": "Utilities",
+    "recipient": "CableVision",
+    "method": "Bank Transfer",
+    "date": "2025-07-17"
+  },
+  {
+    "id": 31,
+    "description": "Restaurant takeout",
+    "amount": "$38.25",
+    "category": "Food",
+    "recipient": "QuickBites",
+    "method": "Mobile Payment",
+    "date": "2025-07-18"
+  },
+  {
+    "id": 32,
+    "description": "Software subscription",
+    "amount": "$19.99",
+    "category": "Technology",
+    "recipient": "AppCorp",
+    "method": "PayPal",
+    "date": "2025-07-18"
+  },
+  {
+    "id": 33,
+    "description": "Train ticket",
+    "amount": "$42.00",
+    "category": "Transportation",
+    "recipient": "RailCo",
+    "method": "Online Payment",
+    "date": "2025-07-19"
+  },
+  {
+    "id": 34,
+    "description": "Museum entry",
+    "amount": "$15.00",
+    "category": "Entertainment",
+    "recipient": "City Museum",
+    "method": "Cash",
+    "date": "2025-07-19"
+  },
+  {
+    "id": 35,
+    "description": "Health insurance",
+    "amount": "$220.00",
+    "category": "Insurance",
+    "recipient": "HealthSafe",
+    "method": "Bank Transfer",
+    "date": "2025-07-20"
+  },
+  {
+    "id": 36,
+    "description": "Coffee machine",
+    "amount": "$89.99",
+    "category": "Shopping",
+    "recipient": "HomeGoods",
+    "method": "Credit Card",
+    "date": "2025-07-20"
+  },
+  {
+    "id": 37,
+    "description": "Yoga classes",
+    "amount": "$60.00",
+    "category": "Health",
+    "recipient": "Zen Studio",
+    "method": "Debit Card",
+    "date": "2025-07-21"
+  },
+  {
+    "id": 38,
+    "description": "Parking permit",
+    "amount": "$25.00",
+    "category": "Transportation",
+    "recipient": "City Council",
+    "method": "Online Payment",
+    "date": "2025-07-21"
+  },
+  {
+    "id": 39,
+    "description": "Magazine subscription",
+    "amount": "$12.99",
+    "category": "Entertainment",
+    "recipient": "NewsStand",
+    "method": "PayPal",
+    "date": "2025-07-22"
+  },
+  {
+    "id": 40,
+    "description": "Gardening supplies",
+    "amount": "$55.60",
+    "category": "Home",
+    "recipient": "GreenThumb",
+    "method": "Credit Card",
+    "date": "2025-07-22"
+  },
+  {
+    "id": 41,
+    "description": "Bus pass",
+    "amount": "$30.00",
+    "category": "Transportation",
+    "recipient": "Transit Authority",
+    "method": "Debit Card",
+    "date": "2025-07-23"
+  },
+  {
+    "id": 42,
+    "description": "Pet grooming",
+    "amount": "$45.00",
+    "category": "Pets",
+    "recipient": "PawCare",
+    "method": "Cash",
+    "date": "2025-07-23"
+  },
+  {
+    "id": 43,
+    "description": "Art supplies",
+    "amount": "$35.20",
+    "category": "Hobbies",
+    "recipient": "Craft Store",
+    "method": "Credit Card",
+    "date": "2025-07-24"
+  },
+  {
+    "id": 44,
+    "description": "Water filter",
+    "amount": "$29.99",
+    "category": "Home",
+    "recipient": "EcoShop",
+    "method": "Online Payment",
+    "date": "2025-07-24"
+  },
+  {
+    "id": 45,
+    "description": "Charity event ticket",
+    "amount": "$100.00",
+    "category": "Donation",
+    "recipient": "Community Fund",
+    "method": "PayPal",
+    "date": "2025-07-25"
+  },
+  {
+    "id": 46,
+    "description": "Fitness tracker",
+    "amount": "$99.99",
+    "category": "Health",
+    "recipient": "TechTrend",
+    "method": "Credit Card",
+    "date": "2025-07-25"
+  },
+  {
+    "id": 47,
+    "description": "Lunch with friends",
+    "amount": "$42.50",
+    "category": "Food",
+    "recipient": "Diner Delight",
+    "method": "Mobile Payment",
+    "date": "2025-07-26"
+  },
+  {
+    "id": 48,
+    "description": "Home insurance",
+    "amount": "$175.00",
+    "category": "Insurance",
+    "recipient": "SafeHome Ins.",
+    "method": "Bank Transfer",
+    "date": "2025-07-26"
+  },
+  {
+    "id": 49,
+    "description": "Online music service",
+    "amount": "$9.99",
+    "category": "Entertainment",
+    "recipient": "TuneStream",
+    "method": "PayPal",
+    "date": "2025-07-27"
+  },
+  {
+    "id": 50,
+    "description": "Bicycle repair",
+    "amount": "$65.00",
+    "category": "Transportation",
+    "recipient": "CycleWorks",
+    "method": "Debit Card",
+    "date": "2025-07-27"
+  },
+  {
+    "id": 51,
+    "description": "Office supplies",
+    "amount": "$28.75",
+    "category": "Work",
+    "recipient": "OfficeMart",
+    "method": "Credit Card",
+    "date": "2025-07-28"
+  },
+  {
+    "id": 52,
+    "description": "Hotel stay",
+    "amount": "$250.00",
+    "category": "Travel",
+    "recipient": "City Hotel",
+    "method": "Online Payment",
+    "date": "2025-07-28"
+  },
+  {
+    "id": 53,
+    "description": "Dry cleaning",
+    "amount": "$22.00",
+    "category": "Personal Care",
+    "recipient": "CleanPress",
+    "method": "Cash",
+    "date": "2025-07-29"
+  },
+  {
+    "id": 54,
+    "description": "Pet food",
+    "amount": "$33.40",
+    "category": "Pets",
+    "recipient": "PetMart",
+    "method": "Debit Card",
+    "date": "2025-07-29"
+  },
+  {
+    "id": 55,
+    "description": "Sports equipment",
+    "amount": "$110.00",
+    "category": "Hobbies",
+    "recipient": "SportZone",
+    "method": "Credit Card",
+    "date": "2025-07-30"
+  },
+  {
+    "id": 56,
+    "description": "Mobile app purchase",
+    "amount": "$4.99",
+    "category": "Technology",
+    "recipient": "AppStore",
+    "method": "Mobile Payment",
+    "date": "2025-07-30"
+  },
+  {
+    "id": 57,
+    "description": "Medical prescription",
+    "amount": "$25.50",
+    "category": "Health",
+    "recipient": "Pharmacy Plus",
+    "method": "Debit Card",
+    "date": "2025-07-31"
+  },
+  {
+    "id": 58,
+    "description": "Car wash",
+    "amount": "$15.00",
+    "category": "Transportation",
+    "recipient": "ShineAuto",
+    "method": "Cash",
+    "date": "2025-07-31"
+  },
+  {
+    "id": 59,
+    "description": "Theater tickets",
+    "amount": "$70.00",
+    "category": "Entertainment",
+    "recipient": "PlayHouse",
+    "method": "Online Payment",
+    "date": "2025-08-01"
+  },
+  {
+    "id": 60,
+    "description": "Furniture purchase",
+    "amount": "$450.00",
+    "category": "Home",
+    "recipient": "HomeStyle",
+    "method": "Credit Card",
+    "date": "2025-08-01"
+  }
+]

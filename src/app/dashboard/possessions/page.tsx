@@ -3,7 +3,7 @@ import { IoCarSportOutline } from "react-icons/io5";
 import { MdOutlineWatch } from "react-icons/md";
 import { PiSailboat } from "react-icons/pi";
 import LargePossessionCard from "./components/large-possession-card/large-possession-card";
-import CardGroup from "~/components/dashboard/card-group/card-group";
+import CardGroup from "~/components/card-group/card-group";
 
 export default function DashboardPossessionsPage() {
   return (

@@ -1,65 +1,119 @@
-import HoldingCard from "~/components/dashboard/holdings/holding-card";
+import CardGroup from "~/components/card-group/card-group";
+import HoldingsCard from "./components/holdings-card/holdings-card";
+import { SiChase } from "react-icons/si";
+import { MdOutlineAccountBalance } from "react-icons/md";
+import { CiCreditCard1 } from "react-icons/ci";
+import { GoGraph } from "react-icons/go";
+import { PiHandCoins } from "react-icons/pi";
+import { SiWellsfargo } from "react-icons/si";
+import { SiRobinhood } from "react-icons/si";
 
 export default function DashboardHoldingsPage() {
   return (
-    <div className="flex h-full w-full gap-4 px-4">
-      <div className="rounded-2xl border border-dashed">
-        <div className="flex justify-between rounded-t-2xl bg-gray-400/10">
-          <h2 className="p-4 text-xl font-semibold">Depositories</h2>
-          <h2 className="text-muted-foreground p-4 text-xl font-semibold">
-            $10,240
-          </h2>
+    <div className="flex flex-col gap-4 px-4">
+      <CardGroup
+        title="Depositories"
+        icon={<MdOutlineAccountBalance className="h-5 w-5" />}
+      >
+        <div className="grid grid-cols-3 gap-4">
+          <HoldingsCard
+            title="Primary Residence"
+            institution="Chase Bank"
+            amount="$350,000"
+            changePercentage="+4.2"
+            icon={<SiChase className="h-6 w-6" />}
+          />
+          <HoldingsCard
+            title="Savings Account"
+            institution="Chase Bank"
+            amount="$15,000"
+            changePercentage="+2.5"
+            icon={<SiChase className="h-6 w-6" />}
+          />
+          <HoldingsCard
+            title="Checking Account"
+            institution="Chase Bank"
+            amount="$5,000"
+            changePercentage="+1.8"
+            icon={<SiWellsfargo className="h-6 w-6" />}
+          />
+          <HoldingsCard
+            title="Investment Account"
+            institution="Chase Bank"
+            amount="$20,000"
+            changePercentage="+3.1"
+            icon={<SiChase className="h-6 w-6" />}
+          />
+          <HoldingsCard
+            title="Retirement Account"
+            institution="Chase Bank"
+            amount="$50,000"
+            changePercentage="+5.0"
+            icon={<SiChase className="h-6 w-6" />}
+          />
         </div>
+      </CardGroup>
 
-        <div className="flex flex-col gap-4 p-4">
-          <HoldingCard title="Checking College" description="Chase Bank" />
-          <HoldingCard title="House Savings" description="Chase Bank" />
-          <HoldingCard title="Emergency Savings" description="Chase Bank" />
+      <CardGroup
+        title="Credit Cards"
+        icon={<CiCreditCard1 className="h-5 w-5" />}
+      >
+        <div className="grid grid-cols-3 gap-4">
+          <HoldingsCard
+            title="Visa Card"
+            institution="Chase Bank"
+            amount="$2,500"
+            changePercentage="-1.2"
+            icon={<SiWellsfargo className="h-6 w-6" />}
+          />
+          <HoldingsCard
+            title="MasterCard"
+            institution="Chase Bank"
+            amount="$1,800"
+            changePercentage="+0.5"
+            icon={<SiChase className="h-6 w-6" />}
+          />
+          <HoldingsCard
+            title="American Express"
+            institution="Chase Bank"
+            amount="$3,200"
+            changePercentage="+2.0"
+            icon={<SiRobinhood className="h-6 w-6" />}
+          />
         </div>
-      </div>
+      </CardGroup>
 
-      <div className="rounded-2xl border border-dashed">
-        <div className="flex justify-between rounded-t-2xl bg-gray-400/10">
-          <h2 className="p-4 text-xl font-semibold">Credit Cards</h2>
-          <h2 className="text-muted-foreground p-4 text-xl font-semibold">
-            $3,012
-          </h2>
+      <CardGroup title="Investments" icon={<GoGraph className="h-5 w-5" />}>
+        <div className="text-muted-foreground flex items-center justify-center pt-4 pb-16">
+          No items
         </div>
+      </CardGroup>
 
-        <div className="flex flex-col gap-4 p-4">
-          <HoldingCard title="Sapphire Preferred" description="Chase Bank" />
-          <HoldingCard title="Amazon" description="Chase Bank" />
+      <CardGroup title="Loans" icon={<PiHandCoins className="h-5 w-5" />}>
+        <div className="grid grid-cols-3 gap-4">
+          <HoldingsCard
+            title="Mortgage"
+            institution="Chase Bank"
+            amount="$250,000"
+            changePercentage="-0.5"
+            icon={<SiChase className="h-6 w-6" />}
+          />
+          <HoldingsCard
+            title="Car Loan"
+            institution="Chase Bank"
+            amount="$15,000"
+            changePercentage="+1.0"
+            icon={<SiChase className="h-6 w-6" />}
+          />
+          <HoldingsCard
+            title="Personal Loan"
+            institution="Chase Bank"
+            amount="$5,000"
+            changePercentage="+0.8"
+            icon={<SiChase className="h-6 w-6" />}
+          />
         </div>
-      </div>
-
-      <div className="rounded-2xl border border-dashed">
-        <div className="flex justify-between rounded-t-2xl bg-gray-400/10">
-          <h2 className="p-4 text-xl font-semibold">Investments</h2>
-          <h2 className="text-muted-foreground p-4 text-xl font-semibold">
-            $122,140
-          </h2>
-        </div>
-
-        <div className="flex flex-col gap-4 p-4">
-          <HoldingCard title="Vanguard Small Cap" description="Vanguard" />
-          <HoldingCard title="Vanguard Mid Cap" description="Vanguard" />
-          <HoldingCard title="Vanguard Large Cap" description="Vanguard" />
-        </div>
-      </div>
-
-      <div className="rounded-2xl border border-dashed">
-        <div className="flex justify-between rounded-t-2xl bg-gray-400/10">
-          <h2 className="p-4 text-xl font-semibold">Loans</h2>
-          <h2 className="text-muted-foreground p-4 text-xl font-semibold">
-            $122,140
-          </h2>
-        </div>
-
-        <div className="flex flex-col gap-4 p-4">
-          <HoldingCard title="SoFi Loan" description="SoFi" />
-          <HoldingCard title="Cyber Truck Loan" description="Tesla" />
-        </div>
-      </div>
+      </CardGroup>
     </div>
   );
 }

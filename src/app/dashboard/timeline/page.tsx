@@ -13,7 +13,7 @@ export default function DashboardTimelinePage() {
 
       <Card className="h-[500px]">
         <CardHeader>
-          <CardTitle>Factors</CardTitle>
+          <CardTitle>Filters</CardTitle>
           <CardDescription>
             Showing total visitors for the last 3 months
           </CardDescription>

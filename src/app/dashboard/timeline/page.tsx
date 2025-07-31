@@ -11,14 +11,14 @@ export default function DashboardTimelinePage() {
     <div className="flex h-full w-full flex-col gap-4 px-4">
       <TimelineGraph />
 
-      <Card className="h-[500px]">
+      {/* <Card className="h-[500px]">
         <CardHeader>
           <CardTitle>Filters</CardTitle>
           <CardDescription>
             Showing total visitors for the last 3 months
           </CardDescription>
         </CardHeader>
-      </Card>
+      </Card> */}
     </div>
   );
 }

@@ -6,8 +6,6 @@ import { MdOutlineDashboard } from "react-icons/md";
 import { MdOutlineSsidChart } from "react-icons/md";
 import { MdPhonelink } from "react-icons/md";
 import { FaRegCreditCard } from "react-icons/fa6";
-import { CiDollar } from "react-icons/ci";
-import { SlGraph } from "react-icons/sl";
 import { LuBrain } from "react-icons/lu";
 import { LuRepeat2 } from "react-icons/lu";
 
@@ -62,18 +60,6 @@ const visualizationPages: NavPage[] = [
 ];
 
 const dataPages: NavPage[] = [
-  {
-    title: "Income",
-    url: "/dashboard/income",
-    icon: <SlGraph />,
-    badge: "2",
-  },
-  {
-    title: "Expenses",
-    url: "/dashboard/expenses",
-    icon: <CiDollar />,
-    badge: "4",
-  },
   {
     title: "Holdings",
     url: "/dashboard/holdings",

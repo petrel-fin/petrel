@@ -1,9 +1,89 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "~/components/ui/card";
+
 export default function DashboardOverviewPage() {
   return (
-    <div className="flex h-full w-full items-center justify-center pb-24">
-      <h3 className="text-muted-foreground scroll-m-20 text-2xl font-semibold tracking-tight">
-        Overview Page
-      </h3>
+    <div className="flex w-full p-4">
+      <div className="grid w-full grid-cols-10 gap-4">
+        <Card className="col-span-2">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+        <Card className="col-span-2">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+        <Card className="col-span-2">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+        <Card className="col-span-4">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+        <Card className="col-span-6">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+        <Card className="col-span-4">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+        <Card className="col-span-3">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+        <Card className="col-span-3">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+        <Card className="col-span-4">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>Card Content</CardContent>
+          <CardFooter className="flex-col gap-2">Card Footer</CardFooter>
+        </Card>
+      </div>
     </div>
   );
 }

@@ -715,19 +715,19 @@ const chartData = [
 const chartConfig = {
   debt: {
     label: "Debt",
-    color: "#62748e",
+    color: "#05df72",
   },
   cash: {
     label: "Cash",
-    color: "#00c951",
+    color: "#00bcff",
   },
   netWorth: {
     label: "Net Worth",
-    color: "#00a6f4",
+    color: "#7c86ff",
   },
   investment: {
     label: "Investment",
-    color: "#8e51ff",
+    color: "#c27aff",
   },
 } satisfies ChartConfig;
 
@@ -778,7 +778,7 @@ export default function TimelineGraph() {
         <Line
           dataKey="debt"
           type="bump"
-          stroke="#62748e"
+          stroke="#05df72"
           dot={false}
           strokeWidth={2}
           filter="url(#rainbow-line-glow)"
@@ -786,7 +786,7 @@ export default function TimelineGraph() {
         <Line
           dataKey="cash"
           type="bump"
-          stroke="#00c951"
+          stroke="#00bcff"
           dot={false}
           strokeWidth={2}
           filter="url(#rainbow-line-glow)"
@@ -794,7 +794,7 @@ export default function TimelineGraph() {
         <Line
           dataKey="netWorth"
           type="bump"
-          stroke="#00a6f4"
+          stroke="#7c86ff"
           dot={false}
           strokeWidth={2}
           filter="url(#rainbow-line-glow)"
@@ -802,7 +802,7 @@ export default function TimelineGraph() {
         <Line
           dataKey="investment"
           type="bump"
-          stroke="#8e51ff"
+          stroke="#c27aff"
           dot={false}
           strokeWidth={2}
           filter="url(#rainbow-line-glow)"

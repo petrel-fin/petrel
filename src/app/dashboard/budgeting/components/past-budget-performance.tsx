@@ -1,10 +1,10 @@
 "use client";
 
-import { Bar, BarChart, CartesianGrid, Cell, LabelList } from "recharts";
+import * as React from "react";
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -16,81 +16,107 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "~/components/ui/chart";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "~/components/ui/select";
 
-export const description = "A bar chart with negative values";
+export const description = "An interactive bar chart";
 
 const chartData = [
-  { month: "January", visitors: 186 },
-  { month: "February", visitors: 205 },
-  { month: "March", visitors: -60 },
-  { month: "April", visitors: 173 },
-  { month: "May", visitors: -187 },
-  { month: "June", visitors: 214 },
-  { month: "July", visitors: 186 },
-  { month: "August", visitors: 205 },
-  { month: "September", visitors: -123 },
-  { month: "October", visitors: 173 },
-  { month: "November", visitors: -89 },
-  { month: "December", visitors: 214 },
+  { date: "2024-06-04", desktop: 439, mobile: 380 },
+  { date: "2024-06-05", desktop: 88, mobile: 140 },
+  { date: "2024-06-06", desktop: 294, mobile: 250 },
+  { date: "2024-06-07", desktop: 323, mobile: 370 },
+  { date: "2024-06-08", desktop: 385, mobile: 320 },
+  { date: "2024-06-09", desktop: 438, mobile: 480 },
+  { date: "2024-06-10", desktop: 155, mobile: 200 },
+  { date: "2024-06-11", desktop: 92, mobile: 150 },
+  { date: "2024-06-12", desktop: 492, mobile: 420 },
+  { date: "2024-06-13", desktop: 81, mobile: 130 },
+  { date: "2024-06-14", desktop: 426, mobile: 380 },
+  { date: "2024-06-15", desktop: 307, mobile: 350 },
+  { date: "2024-06-16", desktop: 371, mobile: 310 },
+  { date: "2024-06-17", desktop: 475, mobile: 520 },
+  { date: "2024-06-18", desktop: 107, mobile: 170 },
+  { date: "2024-06-19", desktop: 341, mobile: 290 },
+  { date: "2024-06-20", desktop: 408, mobile: 450 },
+  { date: "2024-06-21", desktop: 169, mobile: 210 },
+  { date: "2024-06-22", desktop: 317, mobile: 270 },
+  { date: "2024-06-23", desktop: 480, mobile: 530 },
+  { date: "2024-06-24", desktop: 132, mobile: 180 },
+  { date: "2024-06-25", desktop: 141, mobile: 190 },
+  { date: "2024-06-26", desktop: 434, mobile: 380 },
+  { date: "2024-06-27", desktop: 448, mobile: 490 },
+  { date: "2024-06-28", desktop: 149, mobile: 200 },
+  { date: "2024-06-29", desktop: 103, mobile: 160 },
+  { date: "2024-06-30", desktop: 446, mobile: 400 },
 ];
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
+  views: {
+    label: "Page Views",
+  },
+  desktop: {
+    label: "Desktop",
+    color: "var(--chart-2)",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "var(--chart-1)",
   },
 } satisfies ChartConfig;
 
-export default function PastBudgetPerformance() {
+export default function ChartBarInteractive() {
   return (
-    <Card>
+    <Card className="gap-0 pb-0">
       <CardHeader>
-        <CardTitle>Past Budget Performance</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
-        <CardAction>
-          <Select>
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Category" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Category</SelectLabel>
-                <SelectItem value="housing">Housing</SelectItem>
-                <SelectItem value="transportation">Transportation</SelectItem>
-                <SelectItem value="food">Food</SelectItem>
-                <SelectItem value="utilities">Utilities</SelectItem>
-                <SelectItem value="insurance">Insurance</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </CardAction>
+        <CardTitle>Bar Chart - Interactive</CardTitle>
+        <CardDescription>
+          Showing total visitors for the last 3 months
+        </CardDescription>
       </CardHeader>
-      {/* IMPROVE: find a way to remove this */}
-      <CardContent className="h-[185px]">
-        <ChartContainer config={chartConfig} height={185}>
-          <BarChart accessibilityLayer data={chartData}>
+      <CardContent className="h-[200px] px-2 sm:p-6">
+        <ChartContainer
+          config={chartConfig}
+          height={160}
+          className="aspect-auto w-full"
+        >
+          <BarChart
+            accessibilityLayer
+            data={chartData}
+            margin={{
+              left: 12,
+              right: 12,
+            }}
+          >
             <CartesianGrid vertical={false} />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel hideIndicator />}
+            <XAxis
+              dataKey="date"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              minTickGap={32}
+              tickFormatter={(value) => {
+                const date = new Date(value);
+                return date.toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                });
+              }}
             />
-            <Bar dataKey="visitors">
-              <LabelList position="top" dataKey="month" fillOpacity={1} />
-              {chartData.map((item) => (
-                <Cell
-                  key={item.month}
-                  fill={item.visitors > 0 ? "var(--chart-1)" : "var(--chart-2)"}
+            <ChartTooltip
+              content={
+                <ChartTooltipContent
+                  className="w-[150px]"
+                  nameKey="views"
+                  labelFormatter={(value) => {
+                    return new Date(value).toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                    });
+                  }}
                 />
-              ))}
-            </Bar>
+              }
+            />
+            <Bar dataKey={"desktop"} fill={`var(--color-${"desktop"})`} />
           </BarChart>
         </ChartContainer>
       </CardContent>

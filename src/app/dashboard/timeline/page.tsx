@@ -12,7 +12,7 @@ export default function DashboardTimelinePage() {
         <TimelineGraph />
         <TimelineNetGain />
       </div>
-      <Card className="flex h-[900px] w-[500px] flex-col gap-4 p-3">
+      <Card className="flex h-[900px] w-[500px] flex-col gap-4 p-3 dark:bg-gray-400/5">
         <div className="flex flex-col gap-2">
           <p className="text-muted-foreground p-2 text-sm leading-none">
             Primary

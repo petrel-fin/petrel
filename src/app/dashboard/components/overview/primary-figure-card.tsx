@@ -27,7 +27,7 @@ export default function PrimaryFigureCard({
       </CardContent>
       <CardFooter>
         <p className="text-muted-foreground text-sm">
-          <span className="text-blue-400">{change}</span> last month
+          <span className="text-green-400">{change}</span> last month
         </p>
       </CardFooter>
     </Card>

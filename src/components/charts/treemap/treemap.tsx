@@ -35,14 +35,14 @@ export default function Treemap() {
         toolbar: { tools: { download: false } },
       },
       colors: [
-        "#0d47a1", // dark blue
-        "#1565c0",
-        "#1976d2",
-        "#1e88e5",
-        "#2196f3",
-        "#42a5f5",
-        "#64b5f6",
-        "#90caf9", // light blue
+        "#222222", // light gray
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222", // dark gray
       ],
       plotOptions: {
         treemap: {
@@ -50,6 +50,9 @@ export default function Treemap() {
           shadeIntensity: 0.7,
           distributed: true,
         },
+      },
+      stroke: {
+        width: 0.5,
       },
       tooltip: { y: { formatter: (val: number) => `${val} units` } },
     });

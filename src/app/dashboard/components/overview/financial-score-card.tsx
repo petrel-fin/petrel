@@ -20,7 +20,7 @@ export default function FinancialScoreCard() {
       </CardContent>
       <CardFooter>
         <p className="text-muted-foreground text-sm">
-          <span className="text-blue-400">+0.1</span> last month
+          <span className="text-green-400">+0.1</span> last month
         </p>
       </CardFooter>
     </Card>

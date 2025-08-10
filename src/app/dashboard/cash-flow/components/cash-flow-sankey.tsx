@@ -148,7 +148,10 @@ const CashFlowSankey: React.FC = () => {
     });
 
     // Color scale (using Tailwind/ShadCN-inspired colors, e.g., slate for nodes, accents for links)
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    // const color = d3.scaleOrdinal(d3.schemeCategory10);
+    const color = (name: string) => {
+      return "#aaa";
+    };
 
     // Add links (flows)
     svg
@@ -201,7 +204,7 @@ const CashFlowSankey: React.FC = () => {
 
   return (
     <div className="p-4">
-      <svg ref={svgRef} className="min-h-[400px] min-w-[1100px]" />
+      <svg ref={svgRef} className="min-h-[800px] min-w-[1100px]" />
     </div>
   );
 };

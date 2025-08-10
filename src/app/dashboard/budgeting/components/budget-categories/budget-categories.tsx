@@ -18,14 +18,48 @@ import {
   SelectTrigger,
   SelectValue,
 } from "~/components/ui/select";
+import BudgetCategoryGroup from "./budget-category-group";
 
-const budgetCategories: Array<{
+export interface BudgetCategory {
   name: string;
   label: string;
   amount: number;
   current: number;
   change: number;
-}> = [
+}
+
+const budgetCategoriesSavings: BudgetCategory[] = [
+  {
+    name: "investments",
+    label: "Investments",
+    amount: 1500,
+    current: 150,
+    change: -2.5,
+  },
+  {
+    name: "savings",
+    label: "Savings",
+    amount: 500,
+    current: 200,
+    change: 10.0,
+  },
+  {
+    name: "emergencyFund",
+    label: "Emergency Fund",
+    amount: 300,
+    current: 50,
+    change: 5.0,
+  },
+  {
+    name: "retirement",
+    label: "Retirement",
+    amount: 400,
+    current: 100,
+    change: -1.0,
+  },
+];
+
+const budgetCategoriesExpenses: BudgetCategory[] = [
   {
     name: "housing",
     label: "Housing",
@@ -62,13 +96,6 @@ const budgetCategories: Array<{
     change: 0.0,
   },
   {
-    name: "savings",
-    label: "Savings",
-    amount: 500,
-    current: 200,
-    change: 10.0,
-  },
-  {
     name: "entertainment",
     label: "Entertainment",
     amount: 150,
@@ -95,6 +122,13 @@ const budgetCategories: Array<{
     amount: 200,
     current: 75,
     change: -12.5,
+  },
+  {
+    name: "subscriptions",
+    label: "Subscriptions",
+    amount: 100,
+    current: 90,
+    change: -5.0,
   },
 ];
 
@@ -128,30 +162,28 @@ export default function BudgetCategories() {
         </CardAction>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col gap-3">
-          {budgetCategories.map((category) => (
-            <div key={category.name} className="flex w-full flex-col gap-1">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-bold">{category.label}</p>
-                <div className="flex gap-4">
-                  <p className="text-sm">
-                    ${category.current}{" "}
-                    <span className="text-muted-foreground">of</span> $
-                    {category.amount}
-                  </p>
-                  <p
-                    className={`w-10 text-center text-sm ${category.change < 0 ? "text-gray-500" : "text-blue-500"}`}
-                  >
-                    {category.change}%
-                  </p>
-                </div>
-              </div>
-              <Progress
-                className={`h-[12px] rounded-xs bg-gray-500/10 ${category.current > category.amount ? "[&>div]:bg-gray-500" : "[&>div]:bg-blue-500"}`}
-                value={Math.min(1, category.current / category.amount) * 100}
-              />
+        <div className="flex flex-col gap-8">
+          <div className="flex items-center justify-between rounded-lg border border-dashed p-4">
+            <p className="text-muted-foreground">Totals</p>
+            <div className="flex gap-2">
+              <p className="text-xl font-semibold">$124,232</p>
+              <p className="text-muted-foreground text-sm">Net Income</p>
+              <p className="text-xl font-semibold">-</p>
+              <p className="text-xl font-semibold">$110,212</p>
+              <p className="text-muted-foreground text-sm">Expenses</p>
+              <p className="text-xl font-semibold">=</p>
+              <p className="text-xl font-semibold">$4,232.00</p>
+              <p className="text-muted-foreground text-sm"></p>
             </div>
-          ))}
+          </div>
+          <BudgetCategoryGroup
+            title="Savings"
+            categories={budgetCategoriesSavings}
+          />
+          <BudgetCategoryGroup
+            title="Expenses"
+            categories={budgetCategoriesExpenses}
+          />
         </div>
       </CardContent>
     </Card>

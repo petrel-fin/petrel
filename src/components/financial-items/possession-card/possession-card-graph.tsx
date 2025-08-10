@@ -31,7 +31,7 @@
 //   },
 // } satisfies ChartConfig;
 
-// export default function LargePossessionCardGraph() {
+// export default function PossessionCardGraph() {
 //   return (
 //     <ChartContainer config={chartConfig} className="-m-1 h-[50px]" height={50}>
 //       <AreaChart accessibilityLayer data={chartData}>
@@ -84,7 +84,7 @@
 
 "use client";
 
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
+import { CartesianGrid, Line, LineChart } from "recharts";
 
 import {
   ChartContainer,
@@ -115,7 +115,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export default function LargePossessionCardGraph() {
+export default function PossessionCardGraph() {
   return (
     <ChartContainer config={chartConfig} className="-m-1 h-[50px]" height={50}>
       <LineChart accessibilityLayer data={chartData}>

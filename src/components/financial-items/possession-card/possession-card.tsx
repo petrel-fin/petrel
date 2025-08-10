@@ -5,12 +5,12 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import LargePossessionCardGraph from "./large-possession-card-graph";
 import { Separator } from "~/components/ui/separator";
 import { Button } from "~/components/ui/button";
 import { EllipsisVertical } from "lucide-react";
+import PossessionCardGraph from "./possession-card-graph";
 
-interface LargePossessionCardProps {
+interface PossessionCardProps {
   title?: string;
   value?: string;
   changePercentage?: string;
@@ -19,14 +19,14 @@ interface LargePossessionCardProps {
   equity?: string;
 }
 
-export default function LargePossessionCard({
+export default function PossessionCard({
   title,
   value,
   changePercentage,
   monthlyExpenses,
   interestRate,
   equity,
-}: LargePossessionCardProps) {
+}: PossessionCardProps) {
   return (
     <Card className="gap-0 py-1">
       <CardHeader className="px-2 py-0">
@@ -50,7 +50,7 @@ export default function LargePossessionCard({
               last year
             </p>
           </div>
-          <LargePossessionCardGraph />
+          <PossessionCardGraph />
           <div className="flex justify-around px-4 pb-2">
             <div className="flex flex-col">
               <p className="text-muted-foreground text-sm">Monthly Expenses</p>

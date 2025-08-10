@@ -1,15 +1,19 @@
 import { Plus } from "lucide-react";
 import { Button } from "~/components/ui/button";
 
-interface CardGroupProps {
+interface FinancialItemGroupProps {
   icon?: React.ReactNode;
   title?: string;
   children?: React.ReactNode;
 }
 
-export default function CardGroup({ icon, title, children }: CardGroupProps) {
+export default function FinancialItemGroup({
+  icon,
+  title,
+  children,
+}: FinancialItemGroupProps) {
   return (
-    <div className="flex flex-col gap-4 rounded-xl border border-dashed p-4">
+    <div className="flex w-full flex-col gap-4 rounded-xl border border-dashed p-4">
       <div className="flex w-full justify-between">
         <div className="flex items-center gap-2 pl-2">
           {icon}

@@ -9,7 +9,7 @@ export default function DashboardTimelinePage() {
     <div className="flex h-full w-full gap-4 px-4">
       <div className="flex w-full flex-col gap-4">
         <TimelineDateFilter />
-        <TimelineGraph />
+        <TimelineGraph height={690} />
         <TimelineNetGain />
       </div>
       <Card className="flex h-[900px] w-[500px] flex-col gap-4 p-3 dark:bg-gray-400/5">

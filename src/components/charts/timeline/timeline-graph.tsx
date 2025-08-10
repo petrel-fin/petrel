@@ -731,11 +731,15 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export default function TimelineGraph() {
+interface TimelineGraphProps {
+  height?: number;
+}
+
+export default function TimelineGraph({ height = 200 }: TimelineGraphProps) {
   return (
     <ChartContainer
       config={chartConfig}
-      className="aspect-auto h-[690px] w-full"
+      className={`aspect-auto h-[${height}px] w-full`}
     >
       <LineChart
         accessibilityLayer
@@ -745,7 +749,7 @@ export default function TimelineGraph() {
           right: 12,
         }}
       >
-        <CartesianGrid vertical={false} />
+        {/* <CartesianGrid vertical={false} /> */}
         {/* <XAxis
           dataKey="date"
           tickLine={false}

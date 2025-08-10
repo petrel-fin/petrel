@@ -7,7 +7,7 @@ import CurrentMonthlyBudget from "./budgeting/components/current-monthly-budget"
 
 export default function DashboardOverviewPage() {
   return (
-    <div className="flex w-full p-4">
+    <div className="flex w-full px-4">
       <div className="grid w-full grid-cols-10 gap-4">
         <div className="col-span-2">
           <PrimaryFigureCard

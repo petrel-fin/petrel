@@ -37,14 +37,14 @@ export default function BudgetBreakdown() {
     setOptions({
       chart: { type: "treemap", height: 350, toolbar: { show: false } },
       colors: [
-        "#60a5fa",
-        "#3b82f6",
-        "#2563eb",
-        "#1d4ed8",
-        "#1e40af",
-        "#60a5fa",
-        "#3b82f6",
-        "#2563eb",
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222",
+        "#222222",
       ],
       stroke: {
         width: 0.5,

@@ -2,14 +2,25 @@
 
 Innovative financial planning app meant to take you to the next level of personal wealth management.
 
-## Outline
+## Commands
 
-- 'Insert outline here'
-
-psql -U postgres -d petrel
-
+```sh
+# Start database
 ./start-database.sh
 
+# Push drizzle schema
 npm run db:push
 
+# Seed test data
 npm run db:seed
+
+# Run application
+npm run dev
+```
+
+## Debug
+
+```sh
+# Connect to db in container
+psql -U postgres -d petrel
+```

@@ -13,9 +13,32 @@ import {
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { authClient } from "~/lib/auth-client";
 
+// TODO: make this a form with validation
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const router = useRouter();
+
+  const handleSubmit = async () => {
+    try {
+      const response = await authClient.signIn.email({
+        email,
+        password,
+      });
+
+      if (response?.data?.user) {
+        router.push("/dashboard");
+      } else {
+        throw new Error("Login failed");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     // <section className='py-32'>
@@ -51,6 +74,8 @@ export default function Login() {
                     id="email"
                     type="email"
                     placeholder="m@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
@@ -65,14 +90,12 @@ export default function Login() {
                     id="password"
                     type="password"
                     placeholder="Enter your password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                   />
                 </div>
-                <Button
-                  type="submit"
-                  className="w-full"
-                  onClick={() => router.push("/dashboard")}
-                >
+                <Button type="submit" className="w-full" onClick={handleSubmit}>
                   Log in
                 </Button>
               </div>

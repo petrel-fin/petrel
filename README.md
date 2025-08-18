@@ -1,5 +1,26 @@
 # Petrel
+
 Innovative financial planning app meant to take you to the next level of personal wealth management.
 
-## Outline
-- 'Insert outline here'
+## Commands
+
+```sh
+# Start database
+./start-database.sh
+
+# Push drizzle schema
+npm run db:push
+
+# Seed test data
+npm run db:seed
+
+# Run application
+npm run dev
+```
+
+## Debug
+
+```sh
+# Connect to db in container
+psql -U postgres -d petrel
+```

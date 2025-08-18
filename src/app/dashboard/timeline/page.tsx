@@ -3,8 +3,19 @@ import { Card } from "~/components/ui/card";
 import TimelineDateFilter from "./components/timeline-date-filter";
 import TimelineNetGain from "./components/timeline-net-gain";
 import TimelineFilterCheck from "./components/timeline-filter-check";
+import { auth } from "~/server/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-export default function DashboardTimelinePage() {
+export default async function DashboardTimelinePage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (!session) {
+    redirect("/login");
+  }
+
   return (
     <div className="flex h-full w-full gap-4 px-4">
       <div className="flex w-full flex-col gap-4">

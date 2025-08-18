@@ -4,8 +4,19 @@ import OverviewGraphCard from "./components/overview/overview-graph-card";
 import NetWorthCard from "./components/overview/net-worth-card";
 import TransactionsCard from "./components/overview/transactions-card";
 import CurrentMonthlyBudget from "./budgeting/components/current-monthly-budget";
+import { auth } from "~/server/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-export default function DashboardOverviewPage() {
+export default async function DashboardOverviewPage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (!session) {
+    redirect("/login");
+  }
+
   return (
     <div className="flex w-full px-4">
       <div className="grid w-full grid-cols-10 gap-4">

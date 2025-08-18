@@ -1,9 +1,9 @@
-// import "@/assets/styles/globals.css";
 import "~/styles/globals.css";
 import type { Metadata } from "next";
 import { fontSans } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import { ThemeProvider } from "../providers/theme-provider";
+import { TRPCReactProvider } from "~/trpc/react";
 
 export const metadata: Metadata = {
   title: {
@@ -37,9 +37,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable,
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+        <TRPCReactProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {children}
+          </ThemeProvider>
+        </TRPCReactProvider>
       </body>
     </html>
   );

@@ -13,8 +13,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { HiOutlineCash } from "react-icons/hi";
 import HoldingsSection from "~/components/financial-sections/holdings-section";
 import PossessionsSection from "~/components/financial-sections/possessions-section";
+import { auth } from "~/server/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-export default function DashboardPlanningPage() {
+export default async function DashboardPlanningPage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (!session) {
+    redirect("/login");
+  }
+
   return (
     <div className="flex w-full flex-col gap-4 px-4">
       <Card className="w-full bg-transparent">

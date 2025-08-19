@@ -19,6 +19,9 @@ npm run dev
 ```
 
 ## Debug
+```sh
+# Access docker container shell
+docker exec -it <container_name> bash
 
 ```sh
 # Connect to db in container

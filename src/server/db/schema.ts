@@ -72,11 +72,14 @@ export const verifications = pgTable("verifications", {
 
 // Plaid tables
 
-export const holdings = pgTable("accounts", {
+export const holdings = pgTable("holdings", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
-  userId: integer()
+  userId: text("user_id")
     .notNull()
     .references(() => users.id),
+  accountId: text("account_id")
+    .notNull()
+    .references(() => accounts.id),
   plaidAccountId: integer().notNull(),
   plaidItemId: integer().notNull(),
   // accessToken? Separate 'tokens' table?
@@ -95,9 +98,9 @@ export const holdings = pgTable("accounts", {
 
 export const transactions = pgTable("transactions", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
-  accountId: integer()
+  accountId: text("account_id")
     .notNull()
-    .references(() => holdings.id),
+    .references(() => accounts.id),
   plaidTransactionId: integer().notNull(),
   amount: integer(),
   date: integer(), // Needs updating to take plaid transaction date

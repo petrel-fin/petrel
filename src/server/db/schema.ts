@@ -71,15 +71,31 @@ export const verifications = pgTable("verifications", {
 });
 
 // Plaid tables
+export const plaidItems = pgTable("plaid_items", {
+  id: text("id").primaryKey(),
+  userId: text("user_id")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  itemId: text("item_id").notNull(),
+  accessToken: text("access_token").notNull(),
+  institutionId: text("institution_id").notNull(),
+  institutionName: varchar("institution_name", { length: 255 }).notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
 
-export const holdings = pgTable("accounts", {
+export const holdings = pgTable("holdings", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
-  userId: integer()
+  userId: text("user_id")
     .notNull()
     .references(() => users.id),
+  plaidItemId: text("plaid_item_id")
+    .notNull()
+    .references(() => plaidItems.id),
+  accountId: text("account_id")
+    .notNull()
+    .references(() => accounts.id),
   plaidAccountId: integer().notNull(),
-  plaidItemId: integer().notNull(),
-  // accessToken? Separate 'tokens' table?
   accountName: varchar({ length: 255 }).notNull(),
   accountType: varchar({ length: 255 }).notNull(),
   accountNumber: integer().notNull(), // accountNumber will always be masked, i.e. "********1234"
@@ -95,9 +111,12 @@ export const holdings = pgTable("accounts", {
 
 export const transactions = pgTable("transactions", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
-  accountId: integer()
+  accountId: text("account_id")
     .notNull()
-    .references(() => holdings.id),
+    .references(() => accounts.id),
+  plaidItemId: text("plaid_item_id")
+    .notNull()
+    .references(() => plaidItems.id),
   plaidTransactionId: integer().notNull(),
   amount: integer(),
   date: integer(), // Needs updating to take plaid transaction date
